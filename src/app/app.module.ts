@@ -8,6 +8,8 @@ import { AddItemFormComponent } from './add-item-form/add-item-form.component';
 import { BugetItemListComponent } from './buget-item-list/buget-item-list.component';
 import { BugetItemCardComponent } from './buget-item-list/buget-item-card/buget-item-card.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { BugetItemCardComponent } from './buget-item-list/buget-item-card/buget-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

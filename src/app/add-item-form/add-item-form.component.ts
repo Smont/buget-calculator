@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { BugetItem } from './../../shared/models/buget-item.models';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-item-form',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddItemFormComponent implements OnInit {
 
+  @Input() item:BugetItem = new BugetItem('', null);
+ 
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm){
+    console.log(form)
   }
 
 }
