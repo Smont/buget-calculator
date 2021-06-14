@@ -1,44 +1,96 @@
 @import '../../../main-styles.scss';
 
-.root{
-    display: flex;
-    width: 100%;
-}
+.root {
+  display: flex;
+  width: 100%;
+  position: relative;
 
-.buget-item{
+  .buget-item {
     display: flex;
     width: 100%;
-    background-color:$light-grey;
+    background-color: $light-grey;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 
-    .description{
-        flex-grow: 1;
-        font-size: 18px;
-        margin-left: 5px;
-    }
-    .amount{
-        padding: 5px;
-        border-radius: 4px;
-    }
-}
-
-.expense{
-    p{
-        color:$red;
-    }
-    .amount{
-        background-color: $light-red;
-    }
-}
+    transition: background-color 0.2s ease-out;
+    
+    &:hover {
+      background-color: darken($light-grey, 2%);
 
 
-.expense{
-    p{
-        color:$green;
     }
-    .amount{
-        background-color: $light-green;
+
+    .description {
+      flex-grow: 1;
+      font-size: 18px;
+      margin-left: 5px;
+
+      display: flex;
+      align-items: center;
+
+
     }
+
+    .amount {
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+
+
+  }
+
+  .expense {
+    p {
+      color: $red;
+    }
+
+    .amount {
+      background-color: $light-red;
+    }
+  }
+
+
+  .expense {
+    p {
+      color: $green;
+    }
+
+    .amount {
+      background-color: $light-green;
+    }
+  }
+
+  &:hover {
+    .x-icon-button {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .x-icon-button {
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background-color: $dark;
+    right: -17px;
+    top: -17px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 4px;
+    cursor: pointer;
+    color: $red;
+
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    transform: scale(0);
+    opacity: 0;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+  }
+
 }

@@ -11,7 +11,15 @@
   .buget-items-container {
     display: flex;
     max-width: 680px;
-    height: 100%;width: 100%;
+    height: 100%;
+    width: 100%;
+
+    .buget-itens {
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 20px;
+    }
 
     .expenses-column,
     .income-column {

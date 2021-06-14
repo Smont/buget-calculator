@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-buget-item-card',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buget-item-card.component.scss']
 })
 export class BugetItemCardComponent implements OnInit {
+
+  @Input() isIncome: boolean = true;
 
   constructor() { }
 
