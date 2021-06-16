@@ -1,13 +1,14 @@
+import { BudgetItem } from './../../../shared/models/buget-item.models';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-buget-item-card',
-  templateUrl: './buget-item-card.component.html',
-  styleUrls: ['./buget-item-card.component.scss']
+  selector: 'app-budget-item-card',
+  templateUrl: './budget-item-card.component.html',
+  styleUrls: ['./budget-item-card.component.scss']
 })
-export class BugetItemCardComponent implements OnInit {
+export class BudgetItemCardComponent implements OnInit {
 
-  @Input() isIncome: boolean = true;
+  @Input() item!: BudgetItem;
 
   constructor() { }
 

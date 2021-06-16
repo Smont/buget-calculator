@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { BudgetItem } from '../../shared/models/buget-item.models';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-buget-item-list',
-  templateUrl: './buget-item-list.component.html',
-  styleUrls: ['./buget-item-list.component.scss']
+  selector: 'app-budget-item-list',
+  templateUrl: './budget-item-list.component.html',
+  styleUrls: ['./budget-item-list.component.scss']
 })
-export class BugetItemListComponent implements OnInit {
+export class BudgetItemListComponent implements OnInit {
 
+  @Input() budgetItems!: BudgetItem[]|any;
 
 
   constructor() { }

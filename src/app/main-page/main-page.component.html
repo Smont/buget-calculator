@@ -11,14 +11,11 @@
 
 <section class="add-item-section">
     <div class="add-item-container">
-        <app-add-item-form style="padding: 20px;"></app-add-item-form>
+        <app-add-item-form style="padding: 20px;" (formSubmit)="addItem($event)"></app-add-item-form>
     </div>
 </section>
 
 <hr style="margin-top:0;">
+ 
 
-<section class="add-item-section">
-    <div class="add-item-container">
-        <app-buget-item-list style="padding: 20px;"></app-buget-item-list>
-    </div>
-</section>
+<app-buget-item-list [BudgetItems]="BudgetItems"></app-buget-item-list> 
